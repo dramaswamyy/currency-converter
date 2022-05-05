@@ -1,34 +1,23 @@
 import React from 'react';
-import {View, SafeAreaView, TouchableOpacity, Text, StyleSheet} from 'react-native';
+import {SafeAreaView, ScrollView} from 'react-native';
 import { AntDesign } from '@expo/vector-icons'; 
 import colors from '../constants/colors';
 import sizes from '../constants/sizes';
-
-const styles = StyleSheet.create({
-   button : {paddingHorizontal: 16, paddingVertical: 20, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between'},
-   text: { color: colors.darkerColor},
-   separator: {backgroundColor: colors.accent, height: StyleSheet.hairlineWidth, marginHorizontal: 15}
-});
+import RowItem from '../components/RowItem';
+import { Separator } from '../components/Separator';
 
 export default function Option() {
     return (
-      <SafeAreaView>
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.text}>Themes</Text>
-          <AntDesign name='picture' color={colors.accent} size={sizes.button} />
-        </TouchableOpacity>
+      <SafeAreaView style={{flex : 1}}>
+        <ScrollView>
+          <RowItem iconRight={<AntDesign name='picture' color={colors.accent} size={sizes.button} />} onPressBehavior={()=> alert('different!')}>Themes</RowItem>
 
-        <View style={styles.separator} />
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.text}>React Native Basics</Text>
-          <AntDesign name='rightcircle' color={colors.accent} size={sizes.button} />
-        </TouchableOpacity>
+          <Separator />
+          <RowItem iconRight={<AntDesign name='rightCircle' color={colors.accent} size={sizes.button} />}>Themes</RowItem>
 
-        <View style={styles.separator} />
-        <TouchableOpacity style={styles.button}>
-          <Text style={styles.text}>React Native Example</Text>  
-          <AntDesign name='rightcircle' color={colors.accent} size={sizes.button} />
-        </TouchableOpacity>
+          <Separator />
+          <RowItem iconRight={<AntDesign name='rightCircle' color={colors.accent} size={sizes.button} />}>Themes</RowItem>
+        </ScrollView>
       </SafeAreaView>
     );
 }
