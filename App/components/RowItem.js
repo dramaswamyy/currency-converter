@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     text: {
-        color: colors.darkerColor
+        color: colors.darkPurple
     },
 });
 

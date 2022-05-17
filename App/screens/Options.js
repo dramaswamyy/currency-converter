@@ -17,13 +17,13 @@ export default function Option() {
       <SafeAreaView style={{flex : 1}}>
         <ScrollView>
           {/** this url will use a default alert */ }
-          <RowItem iconRight={<AntDesign name='picture' color={colors.accent} size={sizes.button} />}>Themes</RowItem>
+          <RowItem iconRight={<AntDesign name='picture' color={colors.lavender} size={sizes.button} />}>Themes</RowItem>
           {/** this url should work fine */ }
           <Separator />
-          <RowItem iconRight={<AntDesign name='rightcircle' color={colors.accent} size={sizes.button} />} onPressBehavior={()=> openURL('https://learn.reactnativeschool.com/')}>Themes</RowItem>
+          <RowItem iconRight={<AntDesign name='rightcircle' color={colors.lavender} size={sizes.button} />} onPressBehavior={()=> openURL('https://learn.reactnativeschool.com/')}>Themes</RowItem>
           {/** this url will throw an alert error */ }
           <Separator />
-          <RowItem iconRight={<AntDesign name='rightcircle' color={colors.accent} size={sizes.button} />} onPressBehavior={()=> openURL('httpsll://learn.reactnativeschool.com/')}>Themes</RowItem>
+          <RowItem iconRight={<AntDesign name='rightcircle' color={colors.lavender} size={sizes.button} />} onPressBehavior={()=> openURL('httpsll://learn.reactnativeschool.com/')}>Themes</RowItem>
         </ScrollView>
       </SafeAreaView>
     );

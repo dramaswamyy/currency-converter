@@ -1,5 +1,6 @@
 export default {
-    accent: '#23B936',
-    lightAccent: '#fff8e2',
-    darkerColor: '#0c9c19'
+    lavender: '#D8DCFF', // light lavendae accent
+    lightWhite: '#F7F7F7', // white
+    darkPurple: '#565676', // dark muted purple accent
+    brightPurple: '#AEADF0' // saturated purple lavender color
 };

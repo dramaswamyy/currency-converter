@@ -1,6 +1,6 @@
 import React from 'react';
-import Option from './screens/Options';
+import Home from './screens/Home';
 
 export default function () {
-  return <Option />
+  return <Home />
 };
