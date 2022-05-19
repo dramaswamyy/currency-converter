@@ -45,17 +45,16 @@ export default () => {
         </View>
         <ConversionInput 
           buttonText='USD' 
-          textInput='123' 
+          value='123' // this needs to be value for it to show up as the default
           onButtonPress={()=> alert('todo!')} 
-          onChangeText={(text) => console.log('text', text)} // this will concatenate the 2 strings
+          onChangeText={(text) => console.log('text', text)} // this will concatenate the 'text' and user inputted strings
           keyboardType='numeric'
         />
         <ConversionInput 
           buttonText='GBP' 
-          textInput='123' 
+          value='123' 
           onButtonPress={()=> alert('todo!')} 
-          onChangeText={(text) => console.log('text', text)} // this will concatenate the 2 strings
-          keyboardType='numeric'
+          editable={false}
         />
       </View>
 )
